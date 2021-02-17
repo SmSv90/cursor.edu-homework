@@ -26,17 +26,17 @@ const costProductOne = 15.678,
       costProductTwo = 123.965, 
       costProductThree = 90.2345;
 
-const maxPrice = Math.max(costProductOne, costProductTwo, costProductThree).toFixed(2);
-const minPrice = Math.min(costProductOne, costProductTwo, costProductThree).toFixed(2);
+const maxPrice = Math.max(costProductOne, costProductTwo, costProductThree);
+const minPrice = Math.min(costProductOne, costProductTwo, costProductThree);
 
-const fullPrice = (costProductOne + costProductTwo + costProductThree).toFixed(2);
+const fullPrice = (costProductOne + costProductTwo + costProductThree);
 
 const roundToMinPrice = Math.floor(costProductOne) + Math.floor(costProductTwo) + Math.floor(costProductThree);
 const roundTo100Price = Math.round(fullPrice/100)*100;
 
 let priceIsEven = false;
 
-if (Math.floor(fullPrice) % 2 == 0) {
+if (Math.floor(roundToMinPrice) % 2 == 0) {
   priceIsEven = true;
 };
 
