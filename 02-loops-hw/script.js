@@ -5,7 +5,7 @@ do {
   numberN = prompt("Введіть ціле число N");
   numberM = prompt("Введіть ціле число M");
   isEvenSkip = confirm("Бажаєте пропускати парні числа?");
-  if (numberN !== null && numberM !== null) {
+  if (numberN !== null && numberM !== null && (numberN < numberM)) {
     numberN = +numberN;
     numberM = +numberM;
   };
