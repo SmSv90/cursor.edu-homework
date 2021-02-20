@@ -10,7 +10,7 @@ do {
     numberM = +numberM;
   };
   if (!Number.isInteger(numberN) || !Number.isInteger(numberM)) {
-    alert("Ви вказали не вірні значення чисел");
+    alert("Ви вказали невірні значення чисел");
   };
 } while (!Number.isInteger(numberN) || !Number.isInteger(numberM));
 
