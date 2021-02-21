@@ -5,12 +5,17 @@ do {
   numberN = prompt("Введіть ціле число N");
   numberM = prompt("Введіть ціле число M");
   isEvenSkip = confirm("Бажаєте пропускати парні числа?");
+
   if (numberN !== null && numberM !== null && (numberN < numberM)) {
     numberN = +numberN;
     numberM = +numberM;
   };
   if (!Number.isInteger(numberN) || !Number.isInteger(numberM)) {
-    alert("Ви вказали невірні значення чисел");
+    if (numberN >= numberM) {
+      alert("Число M повинно бути більшим за число N");
+    } else {
+      alert("Ви вказали невірні значення чисел");
+    }
   };
 } while (!Number.isInteger(numberN) || !Number.isInteger(numberM));
 
