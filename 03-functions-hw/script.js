@@ -39,7 +39,7 @@ function getRandomNumber(N, M) {
 // функція, яка рахує скільки разів певна буква повторюється в слові
 
 function countLetter(letter, word) {
-  wordLowerCase = word.toLowerCase();
+  const wordLowerCase = word.toLowerCase();
   let counter = 0;
   for (let i = 0; i < wordLowerCase.length; i++) {
     if (letter === wordLowerCase[i]) {
@@ -72,7 +72,7 @@ function getRandomPassword(passLength = 8) {
 // функція, яка видаляє всі вказані букви з речення
 
 function deleteLetters(letter, word) {
-  wordLowerCase = word.toLowerCase();
+  const wordLowerCase = word.toLowerCase();
   let wordWithoutLetter = '';
   for (let i = 0; i < wordLowerCase.length; i++) {
     if (letter !== wordLowerCase[i]) {
@@ -97,8 +97,8 @@ function isPalyndrom(word) {
 // функція, яка видалить з речення букви, які зустрічаються більше 1 разу
 
 function deleteDuplicateLetter(sentence) {
-  sentenceLowerCase = sentence.toLowerCase();
-  sentenceWithoutDublicate = ''
+  const sentenceLowerCase = sentence.toLowerCase();
+  let sentenceWithoutDublicate = '';
   for (let i = 0; i < sentenceLowerCase.length; i++) {
     if (sentenceLowerCase.indexOf(sentenceLowerCase[i]) === sentenceLowerCase.lastIndexOf(sentenceLowerCase[i])) {
       sentenceWithoutDublicate += sentenceLowerCase[i]
