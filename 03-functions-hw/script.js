@@ -86,8 +86,8 @@ function deleteLetters(letter, word) {
 
 function isPalyndrom(word) {
   word = word.replace(/ /g, '').toLowerCase();
-  for (let i = 0; i < word.length/2; i++) {
-    if (word[i] !== word[word.length-1-i]) {
+  for (let i = 0; i < word.length / 2; i++) {
+    if (word[i] !== word[word.length - 1 - i]) {
       return false;
     }
   }
@@ -113,14 +113,17 @@ document.writeln(`<b>Function 3:</b> the formatted version of name "sVIaTosLaV" 
 document.writeln(`<b>Function 4:</b> salary 1000 without tax 19.5% is => ${geWithoutTax (1000, 19.5)} <br>`);
 document.writeln(`<b>Function 5:</b> random number from "1" to "100" is => ${getRandomNumber(1, 100)} <br>`);
 document.writeln(`<b>Function 6:</b> quantity letters "а" in word "Асталавіста" is => ${countLetter("а", "Асталавіста")} <br>`);
-document.writeln(`<b>Function 7:</b> conversion 2800 UAH to dollars (ratio = 28:1) is => ${convertCurrency('2800uah')} || 
-                  conversion 100$ to hryvnias (ratio = 1:28) is => ${convertCurrency('100$')} || 
+document.writeln(`<b>Function 7:</b> <br>
+                  conversion 2800 UAH to dollars (ratio = 28:1) is => ${convertCurrency('2800uah')} || <br>
+                  conversion 100$ to hryvnias (ratio = 1:28) is => ${convertCurrency('100$')} || <br>
                   conversion 100EUR to hryvnias is => ${convertCurrency('100eur')} <br>`);
-document.writeln(`<b>Function 8:</b> random "4" digit numeric password is => ${getRandomPassword(4)} || 
+document.writeln(`<b>Function 8:</b> <br>
+                  random "4" digit numeric password is => ${getRandomPassword(4)} || <br>
                   random "default" digit numeric password is => ${getRandomPassword()} <br>`);
 document.writeln(`<b>Function 9:</b> when letter "b" has deleted from word "blablabla" => ${deleteLetters('b', "blablabla")} <br>`);
-document.writeln(`<b>Function 10:</b> is word "мадам" polyndrom? => ${isPalyndrom("мадам")} ||
-                  is word "кокос" polyndrom? => ${isPalyndrom("кокос")} ||
+document.writeln(`<b>Function 10:</b> <br>
+                  is word "мадам" polyndrom? => ${isPalyndrom("мадам")} ||<br>
+                  is word "кокос" polyndrom? => ${isPalyndrom("кокос")} || <br>
                   is sentence "Я несу гусеня" polyndrom? => ${isPalyndrom("Я несу гусеня")} <br>`);
 document.writeln(`<b>Function 11:</b> when repeat char has deleted from sentence "Бісквіт був дуже ніжним" => 
                   ${deleteDuplicateLetter("Бісквіт був дуже ніжним")} <br>`);
