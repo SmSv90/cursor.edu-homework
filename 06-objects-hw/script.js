@@ -41,14 +41,14 @@ do {
 
   if (word === null || word === '') {
     word = "example";
-  };  
+  };
 
 } while (!Number.isInteger(studentId) || (studentId < 0 || studentId > 2));
 
 
 // Function 1: returns student's list of subjects 
 function getSubjects(student) {
-  const arraySubjects = Object.keys(student.subjects).map( subject => {
+  const arraySubjects = Object.keys(student.subjects).map(subject => {
     return (subject.charAt(0).toUpperCase() + subject.slice(1)).replace('_', ' ');
   });
 
@@ -58,7 +58,7 @@ function getSubjects(student) {
 // Function 2: returns student's average mark of all subjects
 function getAverageMark(student) {
   const arrayMarks = Object.values(student.subjects).flat();
-  const averageMark = arrayMarks.reduce( (total, mark) => {
+  const averageMark = arrayMarks.reduce((total, mark) => {
     return total + mark;
   }) / arrayMarks.length;
 
@@ -66,15 +66,19 @@ function getAverageMark(student) {
 };
 
 // Function 3: returns student's info (course, name, average mark)
-function  getStudentInfo(student) {
+function getStudentInfo(student) {
   const averageMark = getAverageMark(student);
 
-  return {"course": student.course, "name": student.name, averageMark};
+  return {
+    "course": student.course,
+    "name": student.name,
+    averageMark
+  };
 };
 
 // Function 4: returns student's names in alphabetical order
 function getStudentsNames(students) {
-  const studentNames = students.map( student => student.name );
+  const studentNames = students.map(student => student.name);
 
   return studentNames.sort();
 };
@@ -83,7 +87,7 @@ function getStudentsNames(students) {
 function getBestStudent(students) {
   let arrMarks = [];
   for (let i = 0; i < students.length; i++) {
-    arrMarks.push( getAverageMark(students[i]) );
+    arrMarks.push(getAverageMark(students[i]));
   };
 
   const maxMark = Math.max(...arrMarks).toFixed(2);
@@ -98,10 +102,10 @@ function calculateWordLetters(word) {
   let objLetters = {};
 
   arrayLetters.forEach(letter => {
-    if(objLetters[letter] === undefined) {
+    if (objLetters[letter] === undefined) {
       objLetters[letter] = 0;
     }
-      objLetters[letter] += 1;
+    objLetters[letter] += 1;
   });
   return objLetters;
 };
