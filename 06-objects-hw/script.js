@@ -70,17 +70,15 @@ function getStudentInfo(student) {
   const averageMark = getAverageMark(student);
 
   return {
-    "course": student.course,
-    "name": student.name,
+    course: student.course,
+    name: student.name,
     averageMark
   };
 };
 
 // Function 4: returns student's names in alphabetical order
 function getStudentsNames(students) {
-  const studentNames = students.map(student => student.name);
-
-  return studentNames.sort();
+  return students.map(student => student.name).sort();
 };
 
 // Function 5: returns the best average mark's student
