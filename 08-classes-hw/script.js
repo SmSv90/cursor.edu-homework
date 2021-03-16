@@ -1,10 +1,10 @@
 class Student {
-  constructor(university, course, fullName, studentMarks = [5, 4, 4, 5], isStudent = true) {
+  constructor(university, course, fullName) {
     this.university = university;
     this.course = course;
     this.fullName = fullName;
-    this.studentMarks = studentMarks;
-    this.isStudent = isStudent;
+    this.studentMarks = [5, 4, 4, 5];
+    this.isStudent = true;
   }
 
   getInfo() {
@@ -12,11 +12,11 @@ class Student {
   }
 
   get marks() {
-    return this.studentMarks;
+    return this.isStudent ? this.studentMarks : null;
   }
 
   set marks(mark) {
-    if (this.studentMarks !== null) {
+    if (this.isStudent) {
       this.studentMarks.push(mark);
     }
   }
@@ -27,25 +27,23 @@ class Student {
 
   dismiss() {
     this.isStudent = false;
-    this.studentMarks = null;
   }
 
   recover() {
-    if (!this.isStudent) {
-      this.isStudent = true;
-      this.studentMarks = [];
-    }
+    this.isStudent = true;
   }
 };
 
 class BudgetStudent extends Student {
-  constructor(university, course, fullName, studentMarks) {
-    super(university, course, fullName, studentMarks);
+  constructor(university, course, fullName, studentMarks, isStudent) {
+    super(university, course, fullName, studentMarks, isStudent);
     setInterval(() => this.getScholarship(), 30000);
   }
 
   getScholarship() {
-    if (this.studentMarks === null || this.getAverageMark() < 4) {
+    if (!this.isStudent) {
+      console.log(`Are you crazy?!`);
+    } else if (this.getAverageMark() < 4) {
       console.log(`Go away! You can't get scholarship`);
     } else {
       console.log(`You got 1400 UAH of scholarship`);
@@ -54,7 +52,7 @@ class BudgetStudent extends Student {
 };
 
 const john = new Student("Univercity of Oxford", 2, "John Doe");
-const jane = new BudgetStudent("Univercity of Oxford", 1, "Jane Doe", [4, 4, 3, 4]);
+const jane = new BudgetStudent("Univercity of Oxford", 1, "Jane Doe");
 
 console.log(`Student's info: `, john.getInfo());
 console.log(`${john.fullName}'s marks:`, john.marks);
@@ -64,16 +62,18 @@ console.log(`${john.fullName}'s average mark:`, john.getAverageMark());
 john.dismiss();
 console.log(`${john.fullName}'s marks when he has been kicked out from university  :`, john.marks);
 john.recover();
-john.marks = 5;
-john.marks = 4;
-console.log(`${john.fullName}'s marks when he had been recovered at university and he has got a few marks :`, john.marks);
+console.log(`${john.fullName}'s marks when he has been recovered at university:`, john.marks);
 
 console.log(`Info about budget's student: `, jane.getInfo());
 console.log(`${jane.fullName}'s marks:`, jane.marks);
+jane.marks = 1;
+console.log(`${jane.fullName}'s marks when she has got a few  bad marks :`, jane.marks);
 console.log(`When ${jane.fullName} had asked about scholarship, she heard:`);
 jane.getScholarship();
 jane.marks = 5;
-jane.marks = 5;
 console.log(`${jane.fullName}'s marks when she has got a few  good marks :`, jane.marks);
 console.log(`When ${jane.fullName} had asked about scholarship again, she heard:`);
+jane.getScholarship();
+jane.dismiss();
+console.log(`When ${jane.fullName} had been kicked out from university and asked about scholarship, she heard:`);
 jane.getScholarship();
