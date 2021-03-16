@@ -1,9 +1,10 @@
 class Student {
-  constructor(university, course, fullName, studentMarks = [5, 4, 4, 5]) {
+  constructor(university, course, fullName, studentMarks = [5, 4, 4, 5], isStudent = true) {
     this.university = university;
     this.course = course;
     this.fullName = fullName;
     this.studentMarks = studentMarks;
+    this.isStudent = isStudent;
   }
 
   getInfo() {
@@ -25,11 +26,13 @@ class Student {
   }
 
   dismiss() {
+    this.isStudent = false;
     this.studentMarks = null;
   }
 
   recover() {
-    if (this.studentMarks === null) {
+    if (!this.isStudent) {
+      this.isStudent = true;
       this.studentMarks = [];
     }
   }
