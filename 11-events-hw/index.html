@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Events</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h2>Press key on US keyboard or click on key by mouse</h2>
+    <button data-key="KeyQ">
+      <div class="title">Q</div>
+      <div class="descr">bell tone</div>
+    </button>
+    <button data-key="KeyW">
+      <div class="title">W</div>
+      <div class="descr">bongo</div>
+    </button>
+    <button data-key="KeyE">
+      <div class="title">E</div>
+      <div class="descr">electric bass</div>
+    </button>
+    <button data-key="KeyR">
+      <div class="title">R</div>
+      <div class="descr">fanfare</div>
+    </button>
+    <button data-key="KeyT">
+      <div class="title">T</div>
+      <div class="descr">piano</div>
+    </button>
+    <button data-key="KeyY">
+      <div class="title">Y</div>
+      <div class="descr">scratch</div>
+    </button>
+  </div>
+
+  <audio data-key="KeyQ" src="audio/bellTone.mp3"></audio>
+  <audio data-key="KeyW" src="audio/bongo.mp3"></audio>
+  <audio data-key="KeyE" src="audio/electricBass.mp3"></audio>
+  <audio data-key="KeyR" src="audio/fanfare.mp3"></audio>
+  <audio data-key="KeyT" src="audio/piano.mp3"></audio>
+  <audio data-key="KeyY" src="audio/scratchGramophone.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
