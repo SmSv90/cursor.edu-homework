@@ -42,14 +42,16 @@ window.addEventListener('click', (e) => {
   }
 });
 
-
-
 function getPersonsInfo(number) {
   fetch(`https://swapi.dev/api/films/${number}/`)
     .then((response) => response.json())
     .then((data) => {
       for (const persons of data.characters) {
-        if (persons.slice(0, 5) === 'http:') persons = persons.replace('http', 'https')
+        data.characters.forEach(person => {
+          if (person.slice(0, 5) === 'http:') {
+            person = person.replace('http', 'https')
+          }
+        });
         fetch(persons)
           .then((response) => response.json())
           .then((person) => createCharacterCard(person))
@@ -111,12 +113,9 @@ function createCharacterCard(person) {
 
 function createPlanetsList(planet) {
   const planets = document.querySelector('.planets');
-
   const planetName = document.createElement('li');
-
   planetName.classList.add('planets__name');
   planetName.innerHTML = planet.name;
-
   planets.append(planetName);
 }
 
