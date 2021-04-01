@@ -46,16 +46,14 @@ function getPersonsInfo(number) {
   fetch(`https://swapi.dev/api/films/${number}/`)
     .then((response) => response.json())
     .then((data) => {
-      for (const persons of data.characters) {
-        data.characters.forEach(person => {
-          if (person.slice(0, 5) === 'http:') {
-            person = person.replace('http', 'https')
-          }
-        });
-        fetch(persons)
-          .then((response) => response.json())
-          .then((person) => createCharacterCard(person))
-      }
+      data.characters.forEach(person => {
+        if (person.slice(0, 5) === 'http:') {
+          person = person.replace('http', 'https')
+        }
+        fetch(person)
+        .then((response) => response.json())
+        .then((person) => createCharacterCard(person))
+      });
     })
 }
 
