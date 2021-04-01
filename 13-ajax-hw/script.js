@@ -45,7 +45,7 @@ window.addEventListener('click', (e) => {
 
 
 function getPersonsInfo(number) {
-  fetch(`http://swapi.dev/api/films/${number}/`)
+  fetch(`https://swapi.dev/api/films/${number}/`)
     .then((response) => response.json())
     .then((data) => {
       for (const persons of data.characters) {
