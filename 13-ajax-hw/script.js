@@ -49,6 +49,7 @@ function getPersonsInfo(number) {
     .then((response) => response.json())
     .then((data) => {
       for (const persons of data.characters) {
+        if (persons.slice(0, 5) === 'http:') persons = persons.replace('http', 'https')
         fetch(persons)
           .then((response) => response.json())
           .then((person) => createCharacterCard(person))
