@@ -3,5 +3,4 @@
 node_modules/
 debug.log
 .eslintrc.js
-package-lock.json
-package.json
+
