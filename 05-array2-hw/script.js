@@ -1,9 +1,9 @@
 // 1. function returns random numbers
 function getRandomArray(length, min, max) {
   let randomArray = [];
-  
+
   for (let i = 0; i < length; i++) {
-    randomArray.push( Math.round(Math.random() * (max - min) + min) );
+    randomArray.push(Math.round(Math.random() * (max - min) + min));
   }
 
   return randomArray;
@@ -12,11 +12,11 @@ function getRandomArray(length, min, max) {
 // 2. function searches mode of numbers
 function getMode(...numbers) {
   const numArray = numbers.filter(number => Number.isInteger(number));
-  const sortedArray = numArray.sort( (a, b) => a - b );
+  const sortedArray = numArray.sort((a, b) => a - b);
   let nums = {};
 
-  sortedArray.forEach( elem => {
-    if(nums[elem] === undefined) {
+  sortedArray.forEach(elem => {
+    if (nums[elem] === undefined) {
       nums[elem] = 0;
     }
     nums[elem] += 1;
@@ -25,7 +25,7 @@ function getMode(...numbers) {
   const tempArr = Object.entries(nums);
   let maxValue = tempArr[0][1];
   let arrayMode = tempArr[0][0];
-  tempArr.forEach(elem=> {
+  tempArr.forEach(elem => {
     if (elem[1] > maxValue) {
       maxValue = elem[1];
       arrayMode = elem[0];
@@ -38,7 +38,7 @@ function getMode(...numbers) {
 // 3. function counts arithmetic mean
 function getAverage(...numbers) {
   const numArray = numbers.filter(number => Number.isInteger(number));
-  const average = numArray.reduce( (acc, currElem) => {
+  const average = numArray.reduce((acc, currElem) => {
     return acc + currElem;
   }) / numArray.length;
 
@@ -48,11 +48,11 @@ function getAverage(...numbers) {
 // 4. function counts median
 function getMedian(...numbers) {
   const numArray = numbers.filter(number => Number.isInteger(number));
-  const sortedArray = numArray.sort( (a, b) => a - b );
-  let median = sortedArray[(sortedArray.length-1) / 2];
+  const sortedArray = numArray.sort((a, b) => a - b);
+  let median = sortedArray[(sortedArray.length - 1) / 2];
 
   if (sortedArray.length % 2 === 0) {
-    median = ( sortedArray[((sortedArray.length - 1) -1) / 2] + sortedArray[((sortedArray.length-1) + 1) / 2] ) / 2;
+    median = (sortedArray[((sortedArray.length - 1) - 1) / 2] + sortedArray[((sortedArray.length - 1) + 1) / 2]) / 2;
   };
 
   return median;
@@ -71,19 +71,19 @@ function countPositiveNumbers(...numbers) {
 
 // 7. function filters array and returns only numbers which divide on 5
 function getDividedByFive(...numbers) {
-  return numbers.filter( num => num % 5 === 0);
+  return numbers.filter(num => num % 5 === 0);
 };
 
 // 8. function replaces bad words
 function replaceBadWords(string) {
   const wordsArr = string.split(' ');
   const badWords = ['fuck', 'shit'];
- 
+
   const editArr = wordsArr.map(word => {
     for (const badWord of badWords) {
       if (word.includes(badWord)) {
         return word.replace(badWord, '*'.repeat(badWord.length));
-      }  
+      }
     }
     return word;
   });
@@ -121,7 +121,7 @@ function divideByThree(word) {
 document.writeln(`<b>Function 1:</b> function returns 10 random numbers from 0 to 100  => <i>${getRandomArray(10, 0 , 100)}</i> <br>`);
 
 document.writeln(`<b>Function 2:</b> function searches mode of numbers from (6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)  => 
-<i>${getMode(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)}</i> <br>` );
+<i>${getMode(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)}</i> <br>`);
 
 document.writeln(`<b>Function 3:</b> function counts arithmetic mean of numbers from (6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)   =>
 <i>${getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)}</i> <br>`);
@@ -152,7 +152,7 @@ word "big"   => <i>${divideByThree("big")}</i> <br>`);
 document.writeln(`<b>Function 10:</b> I'm so sad. I don't have any idea how to do this task :(`);
 
 // duplicates results in console
-console.log('Function 1 =>',getRandomArray(10, 0 , 100));
+console.log('Function 1 =>', getRandomArray(10, 0, 100));
 console.log('Function 2 =>', getMode(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 console.log('Function 3 =>', getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 console.log('Function 4.1 =>', getMedian(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
@@ -165,15 +165,3 @@ console.log('Function 8 =>', replaceBadWords("Are you fucking kidding? Holy shit
 console.log('Function 9.1 =>', divideByThree("Commander"));
 console.log('Function 9.2 =>', divideByThree("live"));
 console.log('Function 9.3 =>', divideByThree("big"));
-
-export const homeWork05 = {
-  getRandomArray,
-  getMode,
-  getAverage,
-  getMedian,
-  filterEvenNumbers,
-  countPositiveNumbers,
-  getDividedByFive,
-  replaceBadWords,
-  divideByThree
-}

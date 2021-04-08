@@ -3,15 +3,15 @@ const themes = ["Диференційне рівняння", "Теорія ав�
 const marks = [4, 5, 5, 3, 4, 5];
 
 const pairs = getPairs(students),
-  pairsTheme = getPairsTheme(students, themes),
-  studentMark = getStudentMark(students, marks),
-  pairsMark = getPairsMark(students, themes);
+      pairsTheme = getPairsTheme(students, themes),
+      studentMark = getStudentMark(students, marks),
+      pairsMark = getPairsMark(students, themes);      
 
 
 function getPairs(students) {
   let femaleStudents = [],
-    maleStudents = [],
-    pairs = [];
+      maleStudents = [],
+      pairs = [];
 
   for (const name of students) {
     if (name.charAt(name.length - 1) === "а") {
@@ -50,23 +50,33 @@ function getStudentMark(students, marks) {
 
 function getPairsMark(students, themes) {
   const minMark = 1,
-    maxMark = 5;
+        maxMark = 5;
 
   let pairsMarks = getPairsTheme(students, themes);
   const len = pairsMarks.length;
-
+  
   for (let i = 0; i < len; i++) {
-    pairsMarks[i].push(Math.round(Math.random() * (maxMark - minMark) + minMark));
+    pairsMarks[i].push(Math.round(Math.random()*(maxMark - minMark) + minMark));
   }
-
+  
   return pairsMarks;
 };
 
-console.log(`Array of student's pairs:`);
-console.log(pairs);
-console.log(`Array of student's pairs with theme:`);
-console.log(pairsTheme);
-console.log(`Array of student's marks:`);
-console.log(studentMark);
-console.log(`Array of student's pairs with theme and mark:`);
-console.log(pairsMark);
+export const homeWork04 = {
+  getPairs,
+  getPairsTheme,
+  getStudentMark,
+  getPairsMark,
+  students,
+  marks,
+  themes
+}
+
+// console.log(`Array of student's pairs:`);
+// console.log(pairs);
+// console.log(`Array of student's pairs with theme:`);
+// console.log(pairsTheme);
+// console.log(`Array of student's marks:`);
+// console.log(studentMark);
+// console.log(`Array of student's pairs with theme and mark:`);
+// console.log(pairsMark);

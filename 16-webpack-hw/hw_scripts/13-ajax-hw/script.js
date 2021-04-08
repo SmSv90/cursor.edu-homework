@@ -51,8 +51,8 @@ function getPersonsInfo(number) {
           person = person.replace('http', 'https')
         }
         fetch(person)
-          .then((response) => response.json())
-          .then((person) => createCharacterCard(person))
+        .then((response) => response.json())
+        .then((person) => createCharacterCard(person))
       });
     })
 }
@@ -134,4 +134,9 @@ async function toggleList() {
       }
     }
   });
+}
+
+export const homeWork13 = {
+  getPersonsInfo,
+  getPlanets
 }

@@ -54,26 +54,31 @@ class BudgetStudent extends Student {
 const john = new Student("Univercity of Oxford", 2, "John Doe");
 const jane = new BudgetStudent("Univercity of Oxford", 1, "Jane Doe");
 
-console.log(`Student's info: `, john.getInfo());
-console.log(`${john.fullName}'s marks:`, john.marks);
-john.marks = 5;
-console.log(`${john.fullName}'s marks when he has got mark "5" :`, john.marks);
-console.log(`${john.fullName}'s average mark:`, john.getAverageMark());
-john.dismiss();
-console.log(`${john.fullName}'s marks when he has been kicked out from university  :`, john.marks);
-john.recover();
-console.log(`${john.fullName}'s marks when he has been recovered at university:`, john.marks);
+export const homeWork08 = {
+  john,
+  jane
+}
 
-console.log(`Info about budget's student: `, jane.getInfo());
-console.log(`${jane.fullName}'s marks:`, jane.marks);
-jane.marks = 1;
-console.log(`${jane.fullName}'s marks when she has got a few  bad marks :`, jane.marks);
-console.log(`When ${jane.fullName} had asked about scholarship, she heard:`);
-jane.getScholarship();
-jane.marks = 5;
-console.log(`${jane.fullName}'s marks when she has got a few  good marks :`, jane.marks);
-console.log(`When ${jane.fullName} had asked about scholarship again, she heard:`);
-jane.getScholarship();
-jane.dismiss();
-console.log(`When ${jane.fullName} had been kicked out from university and asked about scholarship, she heard:`);
-jane.getScholarship();
+// console.log(`Student's info: `, john.getInfo());
+// console.log(`${john.fullName}'s marks:`, john.marks);
+// john.marks = 5;
+// console.log(`${john.fullName}'s marks when he has got mark "5" :`, john.marks);
+// console.log(`${john.fullName}'s average mark:`, john.getAverageMark());
+// john.dismiss();
+// console.log(`${john.fullName}'s marks when he has been kicked out from university  :`, john.marks);
+// john.recover();
+// console.log(`${john.fullName}'s marks when he has been recovered at university:`, john.marks);
+
+// console.log(`Info about budget's student: `, jane.getInfo());
+// console.log(`${jane.fullName}'s marks:`, jane.marks);
+// jane.marks = 1;
+// console.log(`${jane.fullName}'s marks when she has got a few  bad marks :`, jane.marks);
+// console.log(`When ${jane.fullName} had asked about scholarship, she heard:`);
+// jane.getScholarship();
+// jane.marks = 5;
+// console.log(`${jane.fullName}'s marks when she has got a few  good marks :`, jane.marks);
+// console.log(`When ${jane.fullName} had asked about scholarship again, she heard:`);
+// jane.getScholarship();
+// jane.dismiss();
+// console.log(`When ${jane.fullName} had been kicked out from university and asked about scholarship, she heard:`);
+// jane.getScholarship();

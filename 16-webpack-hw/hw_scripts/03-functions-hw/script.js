@@ -18,21 +18,21 @@ function getDegree(number, power) {
 // функція, яка форматує ім'я, роблячи першу букву великою
 
 function getFormatName(name) {
-  const formatName = name.charAt(0).toUpperCase() + name.substr(1, name.length - 1).toLowerCase();
+  const formatName = name.charAt(0).toUpperCase() + name.substr(1, name.length-1).toLowerCase();
   return formatName;
 }
 
 // функція, яка вираховує суму, що залишається після оплати податку
 
-function geWithoutTax(sum, tax) {
-  const sumWithoutTax = sum - sum * (tax / 100);
+function geWithoutTax (sum, tax) {
+  const sumWithoutTax = sum - sum*(tax/100);
   return sumWithoutTax;
 }
 
 // функція, яка повертає випадкове ціле число в діапазоні від N до M
 
 function getRandomNumber(N, M) {
-  const randomNumber = Math.floor(Math.random() * (M - N + 1)) + N;
+  const randomNumber = Math.floor(Math.random() * (M - N + 1) ) + N;
   return randomNumber;
 }
 
@@ -107,23 +107,39 @@ function deleteDuplicateLetter(sentence) {
   return sentenceWithoutDublicate;
 }
 
-document.writeln(`<b>Function 1:</b> the most digit of number "5687" is => ${getMaxDigit(5687)} <br>`);
-document.writeln(`<b>Function 2:</b> the degree "3" of number "5" is => ${getDegree(5, 3)} <br>`);
-document.writeln(`<b>Function 3:</b> the formatted version of name "sVIaTosLaV" is => ${getFormatName("sVIaTosLaV")} <br>`);
-document.writeln(`<b>Function 4:</b> salary 1000 without tax 19.5% is => ${geWithoutTax (1000, 19.5)} <br>`);
-document.writeln(`<b>Function 5:</b> random number from "1" to "100" is => ${getRandomNumber(1, 100)} <br>`);
-document.writeln(`<b>Function 6:</b> quantity letters "а" in word "Асталавіста" is => ${countLetter("а", "Асталавіста")} <br>`);
-document.writeln(`<b>Function 7:</b> <br>
-                  conversion 2800 UAH to dollars (ratio = 28:1) is => ${convertCurrency('2800uah')} || <br>
-                  conversion 100$ to hryvnias (ratio = 1:28) is => ${convertCurrency('100$')} || <br>
-                  conversion 100EUR to hryvnias is => ${convertCurrency('100eur')} <br>`);
-document.writeln(`<b>Function 8:</b> <br>
-                  random "4" digit numeric password is => ${getRandomPassword(4)} || <br>
-                  random "default" digit numeric password is => ${getRandomPassword()} <br>`);
-document.writeln(`<b>Function 9:</b> when letter "b" has deleted from word "blablabla" => ${deleteLetters('b', "blablabla")} <br>`);
-document.writeln(`<b>Function 10:</b> <br>
-                  is word "мадам" polyndrom? => ${isPalyndrom("мадам")} ||<br>
-                  is word "кокос" polyndrom? => ${isPalyndrom("кокос")} || <br>
-                  is sentence "Я несу гусеня" polyndrom? => ${isPalyndrom("Я несу гусеня")} <br>`);
-document.writeln(`<b>Function 11:</b> when repeat char has deleted from sentence "Бісквіт був дуже ніжним" => 
-                  ${deleteDuplicateLetter("Бісквіт був дуже ніжним")} <br>`);
+export const homeWork03 = {
+  getMaxDigit,
+  getDegree,
+  getFormatName,
+  geWithoutTax,
+  getRandomNumber,
+  countLetter,
+  convertCurrency,
+  getRandomPassword,
+  deleteLetters,
+  isPalyndrom,
+  deleteDuplicateLetter
+};
+
+
+// document.writeln(`<b>Function 1:</b> the most digit of number "5687" is => ${getMaxDigit(5687)} <br>`);
+// document.writeln(`<b>Function 2:</b> the degree "3" of number "5" is => ${getDegree(5, 3)} <br>`);
+// document.writeln(`<b>Function 3:</b> the formatted version of name "sVIaTosLaV" is => ${getFormatName("sVIaTosLaV")} <br>`);
+// document.writeln(`<b>Function 4:</b> salary 1000 without tax 19.5% is => ${geWithoutTax (1000, 19.5)} <br>`);
+// document.writeln(`<b>Function 5:</b> random number from "1" to "100" is => ${getRandomNumber(1, 100)} <br>`);
+// document.writeln(`<b>Function 6:</b> quantity letters "а" in word "Асталавіста" is => ${countLetter("а", "Асталавіста")} <br>`);
+// document.writeln(`<b>Function 7:</b> <br>
+//                   conversion 2800 UAH to dollars (ratio = 28:1) is => ${convertCurrency('2800uah')} || <br>
+//                   conversion 100$ to hryvnias (ratio = 1:28) is => ${convertCurrency('100$')} || <br>
+//                   conversion 100EUR to hryvnias is => ${convertCurrency('100eur')} <br>`);
+// document.writeln(`<b>Function 8:</b> <br>
+//                   random "4" digit numeric password is => ${getRandomPassword(4)} || <br>
+//                   random "default" digit numeric password is => ${getRandomPassword()} <br>`);
+// document.writeln(`<b>Function 9:</b> when letter "b" has deleted from word "blablabla" => ${deleteLetters('b', "blablabla")} <br>`);
+// document.writeln(`<b>Function 10:</b> <br>
+//                   is word "мадам" polyndrom? => ${isPalyndrom("мадам")} ||<br>
+//                   is word "кокос" polyndrom? => ${isPalyndrom("кокос")} || <br>
+//                   is sentence "Я несу гусеня" polyndrom? => ${isPalyndrom("Я несу гусеня")} <br>`);
+// document.writeln(`<b>Function 11:</b> when repeat char has deleted from sentence "Бісквіт був дуже ніжним" => 
+//                   ${deleteDuplicateLetter("Бісквіт був дуже ніжним")} <br>`);
+

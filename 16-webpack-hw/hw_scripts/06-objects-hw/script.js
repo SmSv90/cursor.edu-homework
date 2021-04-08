@@ -108,10 +108,20 @@ function calculateWordLetters(word) {
   return objLetters;
 };
 
-console.log(`Array of students: `, students);
-console.log(`Subjects of student ${students[studentId].name} are: `, getSubjects(students[studentId]));
-console.log(`Average subjects mark of student ${students[studentId].name} is: `, getAverageMark(students[studentId]));
-console.log(`Information of student index# ${studentId} is: `, getStudentInfo(students[studentId]));
-console.log(`Alphabetical order of student's names are: `, getStudentsNames(students));
-console.log(`The best student is `, getBestStudent(students));
-console.log(`Word "${word}" consists of these letters: `, calculateWordLetters(word));
+export const homeWork06 = {
+  getSubjects,
+  getAverageMark,
+  getStudentInfo,
+  getStudentsNames,
+  getBestStudent,
+  calculateWordLetters,
+  students
+}
+
+// console.log(`Array of students: `, students);
+// console.log(`Subjects of student ${students[studentId].name} are: `, getSubjects(students[studentId]));
+// console.log(`Average subjects mark of student ${students[studentId].name} is: `, getAverageMark(students[studentId]));
+// console.log(`Information of student index# ${studentId} is: `, getStudentInfo(students[studentId]));
+// console.log(`Alphabetical order of student's names are: `, getStudentsNames(students));
+// console.log(`The best student is `, getBestStudent(students));
+// console.log(`Word "${word}" consists of these letters: `, calculateWordLetters(word));
