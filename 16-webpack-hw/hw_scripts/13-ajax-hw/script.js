@@ -138,5 +138,7 @@ async function toggleList() {
 
 export const homeWork13 = {
   getPersonsInfo,
-  getPlanets
+  getPlanets,
+  createPlanetsList,
+  createCharacterCard
 }

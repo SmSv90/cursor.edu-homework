@@ -16,3 +16,15 @@ import css from "../hw_scripts/11-events-hw/main.css";
 import img from "../hw_scripts/13-ajax-hw/assets/icons/robot.png";
 import html from '../hw_scripts/11-events-hw/index.html';
 
+
+console.log('HW03', homeWork03.getFormatName("sViAtoSLav"));
+console.log('HW04', homeWork04.getPairs(homeWork04.students));
+console.log('HW05', homeWork05.getRandomArray(5, 0, 10));
+console.log('HW06', homeWork06.getStudentInfo(homeWork06.students[0]));
+console.log('HW07', homeWork07.getMiddleTaxes.call(homeWork07.ukraine));
+console.log('HW08', homeWork08.john.getInfo());
+console.log('HW10', homeWork10.generateBlocks);
+console.log('HW11', homeWork11.keydownFunc);
+console.log('HW12', homeWork12.getRandomChinese(8));
+console.log('HW13', homeWork13.getPlanets);
+console.log('HW15', homeWork15.createIdGenerator().next().value);

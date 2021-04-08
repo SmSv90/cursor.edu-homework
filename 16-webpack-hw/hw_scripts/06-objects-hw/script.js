@@ -25,25 +25,25 @@ const students = [{
 }];
 
 // a little user interaction
-let studentId, word;
+// let studentId, word;
 
-do {
-  studentId = +prompt("Select student's index from 0 to 2. Or enter cancel to show default values");
-  word = prompt("Enter your word. Or enter cancel to show default value");
+// do {
+//   studentId = +prompt("Select student's index from 0 to 2. Or enter cancel to show default values");
+//   word = prompt("Enter your word. Or enter cancel to show default value");
 
-  if (studentId === null) {
-    studentId = 0;
-  };
+//   if (studentId === null) {
+//     studentId = 0;
+//   };
 
-  if (!Number.isInteger(studentId) || (studentId < 0 || studentId > 2)) {
-    alert("You entered incorrect student's index")
-  };
+//   if (!Number.isInteger(studentId) || (studentId < 0 || studentId > 2)) {
+//     alert("You entered incorrect student's index")
+//   };
 
-  if (word === null || word === '') {
-    word = "example";
-  };
+//   if (word === null || word === '') {
+//     word = "example";
+//   };
 
-} while (!Number.isInteger(studentId) || (studentId < 0 || studentId > 2));
+// } while (!Number.isInteger(studentId) || (studentId < 0 || studentId > 2));
 
 
 // Function 1: returns student's list of subjects 
@@ -115,7 +115,7 @@ export const homeWork06 = {
   getStudentsNames,
   getBestStudent,
   calculateWordLetters,
-  students
+  students,
 }
 
 // console.log(`Array of students: `, students);

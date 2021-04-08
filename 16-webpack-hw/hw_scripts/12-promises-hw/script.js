@@ -19,7 +19,7 @@ async function getRandomChinese(length) {
   console.log(result);
 }
 
-getRandomChinese(4);
+// getRandomChinese(4);
 
 export const homeWork12 = {
   getRandomChinese
