@@ -31,6 +31,12 @@ function createText(size) {
   document.body.append(textWrapper);
 }
 
+export const homeWork15 = {
+  createText,
+  newFontGenerator,
+  createIdGenerator
+}
+
 const idGenerator = createIdGenerator();
 document.writeln(`<b>Function 1:</b><br>`)
 document.writeln(`1st request of generator: ${idGenerator.next().value}<br>`);

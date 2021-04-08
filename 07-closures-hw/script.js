@@ -45,6 +45,16 @@ function getMySalary(country) {
   setTimeout(() => getMySalary(country), 10000);
 }
 
+export const homeWork07 = {
+  ukraine,
+  latvia,
+  litva,
+  getMyTaxes,
+  getMiddleTaxes,
+  getTotalTaxes,
+  getMySalary
+}
+
 console.log('Function 1: It is a tax in Latvia: ', getMyTaxes.call(latvia, 1000));
 console.log('Function 1: It is a tax in Litva: ', getMyTaxes.call(litva, 1000));
 console.log('Function 1: It is a tax in Ukraine: ', getMyTaxes.call(ukraine, 1000));

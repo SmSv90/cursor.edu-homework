@@ -54,6 +54,11 @@ class BudgetStudent extends Student {
 const john = new Student("Univercity of Oxford", 2, "John Doe");
 const jane = new BudgetStudent("Univercity of Oxford", 1, "Jane Doe");
 
+export const homeWork08 = {
+  john,
+  jane
+}
+
 console.log(`Student's info: `, john.getInfo());
 console.log(`${john.fullName}'s marks:`, john.marks);
 john.marks = 5;

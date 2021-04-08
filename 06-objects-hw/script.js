@@ -108,6 +108,16 @@ function calculateWordLetters(word) {
   return objLetters;
 };
 
+export const homeWork06 = {
+  getSubjects,
+  getAverageMark,
+  getStudentInfo,
+  getStudentsNames,
+  getBestStudent,
+  calculateWordLetters,
+  students
+}
+
 console.log(`Array of students: `, students);
 console.log(`Subjects of student ${students[studentId].name} are: `, getSubjects(students[studentId]));
 console.log(`Average subjects mark of student ${students[studentId].name} is: `, getAverageMark(students[studentId]));

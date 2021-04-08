@@ -41,3 +41,11 @@ function resetPage() {
   document.location.reload();
 }
 
+export const homeWork10 = {
+  blockCSSList,
+  wrapperCSSList,
+  wrapperBlockLimit,
+  getRandomColor,
+  generateBlocks,
+  generateBlocksInterval
+}

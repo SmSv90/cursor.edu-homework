@@ -107,6 +107,20 @@ function deleteDuplicateLetter(sentence) {
   return sentenceWithoutDublicate;
 }
 
+export const homeWork03 = {
+  getMaxDigit,
+  getDegree,
+  getFormatName,
+  geWithoutTax,
+  getRandomNumber,
+  countLetter,
+  convertCurrency,
+  getRandomPassword,
+  deleteLetters,
+  isPalyndrom,
+  deleteDuplicateLetter
+}
+
 document.writeln(`<b>Function 1:</b> the most digit of number "5687" is => ${getMaxDigit(5687)} <br>`);
 document.writeln(`<b>Function 2:</b> the degree "3" of number "5" is => ${getDegree(5, 3)} <br>`);
 document.writeln(`<b>Function 3:</b> the formatted version of name "sVIaTosLaV" is => ${getFormatName("sVIaTosLaV")} <br>`);

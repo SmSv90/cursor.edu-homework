@@ -166,4 +166,14 @@ console.log('Function 9.1 =>', divideByThree("Commander"));
 console.log('Function 9.2 =>', divideByThree("live"));
 console.log('Function 9.3 =>', divideByThree("big"));
 
-
+export const homeWork05 = {
+  getRandomArray,
+  getMode,
+  getAverage,
+  getMedian,
+  filterEvenNumbers,
+  countPositiveNumbers,
+  getDividedByFive,
+  replaceBadWords,
+  divideByThree
+}

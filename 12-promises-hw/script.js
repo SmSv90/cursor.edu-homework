@@ -20,3 +20,7 @@ async function getRandomChinese(length) {
 }
 
 getRandomChinese(4);
+
+export const homeWork12 = {
+  getRandomChinese
+}

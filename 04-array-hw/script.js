@@ -62,6 +62,16 @@ function getPairsMark(students, themes) {
   return pairsMarks;
 };
 
+export const homeWork04 = {
+  getPairs,
+  getPairsTheme,
+  getStudentMark,
+  getPairsMark,
+  students,
+  marks,
+  themes
+}
+
 console.log(`Array of student's pairs:`);
 console.log(pairs);
 console.log(`Array of student's pairs with theme:`);

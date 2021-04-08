@@ -31,3 +31,5 @@ window.addEventListener('click', function (e) {
     key.classList.remove('playing');
   }, 1500);
 })
+
+

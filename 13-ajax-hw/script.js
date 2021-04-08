@@ -135,3 +135,8 @@ async function toggleList() {
     }
   });
 }
+
+export const homeWork13 = {
+  getPersonsInfo,
+  getPlanets
+}
