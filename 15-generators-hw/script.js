@@ -1,4 +1,5 @@
-// Function 1
+const initialFontSize = 14;
+
 function* createIdGenerator() {
   let i = 1;
 
@@ -7,7 +8,6 @@ function* createIdGenerator() {
   }
 }
 
-// Function 2
 function* newFontGenerator(fontSize) {
   let size = fontSize;
   createText(size);
@@ -38,7 +38,7 @@ document.writeln(`2nd request of generator: ${idGenerator.next().value}<br>`);
 document.writeln(`3rd request of generator: ${idGenerator.next().value}<br>`);
 
 document.writeln(`<b>Function 2:</b><br>`);
-const fontGenerator = newFontGenerator(14); // 14 – стартове значення
+const fontGenerator = newFontGenerator(initialFontSize);
 fontGenerator.next("up").value;
 fontGenerator.next("up").value;
 fontGenerator.next("up").value;
