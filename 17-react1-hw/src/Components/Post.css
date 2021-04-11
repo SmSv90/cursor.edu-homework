@@ -1,0 +1,102 @@
+body {
+  height: 100vh;
+  background-image: linear-gradient(45deg, indigo, yellow);
+}
+
+.wrapper {
+  width: 800px;
+  min-height: 400px;
+  background-color: rgb(48, 163, 163);
+  border: 5px solid black;
+  margin: 20px auto;
+}
+
+.author {
+  display: flex;
+  width: 100%;
+  min-height: 25%;
+}
+
+.author-avatar {
+  width: 15%;
+}
+
+.author-avatar img {
+  width: 75px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.author-content {
+  width: 85%;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(27, 22, 22);
+}
+
+.author-info {
+  display: flex;
+  justify-content: start;
+  padding-top: 5px;
+}
+
+.author-info div {
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.author-info .author-name {
+  font-weight: bold;
+  margin-right: 0;
+}
+
+.author-info .author-nickname,
+.author-info .date {
+  color: rgb(54, 54, 54);
+}
+
+.author-info .info-option {
+  margin-left: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.author-icon img,
+.info-option img,
+.social img {
+  width: 20px;
+  height: auto;
+}
+
+.author-content .content-main {
+  text-align: left;
+  width: 85%;
+  margin-left: 10px;
+}
+
+.image {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -5px;
+  padding-top: 0;
+  margin-right: 10px;
+}
+
+.image img {
+  margin-top: 0;
+  width: 85%;
+  height: auto;
+  border-radius: 3%;
+}
+
+.social {
+  display: flex;
+  padding-left: 15%;
+  margin-top: 10px;
+}
+
+.social div {
+  margin-right: 18%;
+  font-size: 18px;
+  color: rgb(27, 22, 22);
+}
